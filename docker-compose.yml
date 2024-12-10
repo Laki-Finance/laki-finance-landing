@@ -1,0 +1,36 @@
+version: '3.8'
+
+networks:
+  react-network:
+    driver: bridge
+
+services:
+  react-app:
+    container_name: reactapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3081:80"  # Expose port 3000 on the host to port 80 in the container (nginx)
+    environment:
+      - NODE_ENV=production
+      - WATCHPACK_POLLING=true
+    depends_on:
+      - fastapi
+    networks:
+      - react-network
+    links:
+      - fastapi
+    
+  fastapi:
+    build:
+      context: ./lake-api
+      dockerfile: Dockerfile
+    container_name: fastapi
+    ports:
+      - "8070:8000"
+    networks:
+      - react-network
+    # volumes:
+    #   - ./subscribers.db:/app/subscribers.db  # Persist the SQLite DB outside the container
+

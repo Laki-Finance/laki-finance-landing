@@ -1,0 +1,138 @@
+/* BlogPage.css */
+body {
+    background-color: #757575;
+}
+/* Overall section styling */
+.blog-section {
+    background-color: #f1f1f1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .blog-header {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Hero Article Styling */
+  .hero-article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px; /* Make sure the hero image is large */
+  }
+  
+  .hero-content {
+    background-color: #f1f1f1;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    max-width: 60%;
+    opacity: 0.7;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #757575;
+  }
+  
+  .read-more {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Blog Container Styling */
+  .blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .blog-card {
+    width: 48%; /* Adjust the width to make the cards responsive */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+  }
+  
+  .blog-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .hero-article {
+      flex-direction: column;
+    }
+  
+    .hero-content {
+      top: 40%;
+      left: 10%;
+      max-width: 80%;
+    }
+  
+    .blog-container {
+      flex-direction: column;
+    }
+  
+    .blog-card {
+      width: 100%;
+    }
+  }
+  
+  
+  .read-more {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .loading-spinner {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
