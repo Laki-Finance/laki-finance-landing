@@ -10,6 +10,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    restart: unless-stopped
     ports:
       - "3081:80"  # Expose port 3000 on the host to port 80 in the container (nginx)
     environment:
@@ -20,6 +21,8 @@ services:
     networks:
       - react-network
     links:
+
+      
       - fastapi
     
   fastapi:
@@ -27,6 +30,7 @@ services:
       context: ./lake-api
       dockerfile: Dockerfile
     container_name: fastapi
+    restart: unless-stopped
     ports:
       - "8070:8000"
     networks:

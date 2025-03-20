@@ -1,7 +1,7 @@
 # Define variables for the services
 REACT_SERVICE = react-app
 FASTAPI_SERVICE = fastapi-app
-DOCKER_COMPOSE = docker-compose
+DOCKER_COMPOSE = @DOCKER_HOST=ssh://henry@runbit.co.uk docker compose
 
 # Default target - Bring up all services
 .PHONY: up
